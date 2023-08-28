@@ -1,0 +1,10 @@
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/bin/Debug/net6.0/Infrastructure.dll
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/bin/Debug/net6.0/Infrastructure.pdb
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/obj/Debug/net6.0/Infrastructure.csproj.AssemblyReference.cache
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/obj/Debug/net6.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/obj/Debug/net6.0/Infrastructure.AssemblyInfoInputs.cache
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/obj/Debug/net6.0/Infrastructure.AssemblyInfo.cs
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/obj/Debug/net6.0/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/obj/Debug/net6.0/Infrastructure.dll
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/obj/Debug/net6.0/refint/Infrastructure.dll
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/obj/Debug/net6.0/Infrastructure.pdb

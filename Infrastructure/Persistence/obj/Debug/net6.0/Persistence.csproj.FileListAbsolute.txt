@@ -1,0 +1,10 @@
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/bin/Debug/net6.0/Persistence.dll
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/bin/Debug/net6.0/Persistence.pdb
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/obj/Debug/net6.0/Persistence.csproj.AssemblyReference.cache
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/obj/Debug/net6.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/obj/Debug/net6.0/Persistence.AssemblyInfoInputs.cache
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/obj/Debug/net6.0/Persistence.AssemblyInfo.cs
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/obj/Debug/net6.0/Persistence.csproj.CoreCompileInputs.cache
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/obj/Debug/net6.0/Persistence.dll
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/obj/Debug/net6.0/refint/Persistence.dll
+/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/obj/Debug/net6.0/Persistence.pdb
