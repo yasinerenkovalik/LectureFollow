@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sm3tLgYWUI3Z+UTpuFG0gQQ13khJgnIOnnlyEbTzt6ggle6mSuVmB2NT9SeFEqvWSpjh3O/bPoyLstGOqlHPrg==",
+  "dgSpecHash": "L1SOJn7OZZMXyOTU3SGfSdKsVb3bk+9+qt33nORR0BivelAUCmNToVOzK0JIHM1R6mNoE0PxM0NIuxDkzbuWOw==",
   "success": true,
   "projectFilePath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/eren/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0-preview.1.21102.12/microsoft.extensions.dependencyinjection.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0-preview.1.21102.12/microsoft.extensions.dependencyinjection.abstractions.6.0.0-preview.1.21102.12.nupkg.sha512"
+  ],
   "logs": []
 }

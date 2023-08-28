@@ -1,6 +1,9 @@
 
 
+using Application.Repository;
 using Application.Services;
+using Domain;
+using Persistence.Repository;
 using Persistence.Service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +15,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IStudentService, StudentService>();
+
+
+
 
 var app = builder.Build();
 

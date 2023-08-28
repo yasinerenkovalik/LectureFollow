@@ -8,10 +8,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Application\Application.csproj" />
+      <ProjectReference Include="..\..\Domain\Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.15" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
       <PackageReference Include="Oracle.EntityFrameworkCore" Version="6.21.61" />
       <PackageReference Include="Oracle.ManagedDataAccess" Version="23.2.0-dev" />
       <PackageReference Include="Oracle.ManagedDataAccess.EntityFramework" Version="21.9.0" />

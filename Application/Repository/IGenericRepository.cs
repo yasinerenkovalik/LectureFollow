@@ -3,7 +3,7 @@ using Domain;
 
 namespace Application.Repository;
 
-public interface IGenericRepository<T> where T:BaseEntity
+public interface IGenericRepository<T> where T:IEntity
 {
     bool Add(T entity);
     List<T> GetAll(Expression<Func<T, bool>>? filter = null);

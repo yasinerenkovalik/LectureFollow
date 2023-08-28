@@ -7,5 +7,6 @@ public class StudentRepository:Repository<StudentEntity>
 {
     public StudentRepository(OracleContext context) : base(context)
     {
+        
     }
 }

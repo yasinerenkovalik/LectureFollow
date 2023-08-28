@@ -2,7 +2,7 @@ using Domain;
 
 namespace Application.Services;
 
-public interface IGenericService<T> where T :BaseEntity
+public interface IGenericService<T> where T :IEntity
 {
     bool Add(T entity);
     List<T> GetAll();

@@ -1,8 +1,91 @@
 {
   "version": 2,
-  "dgSpecHash": "lw+I01J93EqxLOhg8rdyTX0/j4xQplPGxptGanOid6UNdNjY85LsVqte42JiUsP6FzRzcEIkLbK68Q4b9eqVlA==",
+  "dgSpecHash": "hod957zxUu8+C1CU6wyzLsjNZ13QrWHivgbv8r0VlzuyRAtyhKzvEVFh+MrrnFdEdTpSjr5OvXsn7UF3C8L5hA==",
   "success": true,
   "projectFilePath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/Infrastructure.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "/Users/eren/.nuget/packages/entityframework/6.0.0/entityframework.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.entityframeworkcore/6.0.15/microsoft.entityframeworkcore.6.0.15.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.15/microsoft.entityframeworkcore.abstractions.6.0.15.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.15/microsoft.entityframeworkcore.analyzers.6.0.15.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.3/microsoft.entityframeworkcore.relational.6.0.3.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.caching.memory/6.0.1/microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.1/microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.logging/6.0.0/microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.netcore.platforms/5.0.4/microsoft.netcore.platforms.5.0.4.nupkg.sha512",
+    "/Users/eren/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/oracle.entityframeworkcore/6.21.61/oracle.entityframeworkcore.6.21.61.nupkg.sha512",
+    "/Users/eren/.nuget/packages/oracle.manageddataaccess/23.2.0-dev/oracle.manageddataaccess.23.2.0-dev.nupkg.sha512",
+    "/Users/eren/.nuget/packages/oracle.manageddataaccess.core/3.21.61/oracle.manageddataaccess.core.3.21.61.nupkg.sha512",
+    "/Users/eren/.nuget/packages/oracle.manageddataaccess.entityframework/21.9.0/oracle.manageddataaccess.entityframework.21.9.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.configuration.configurationmanager/6.0.0/system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.diagnostics.diagnosticsource/6.0.1/system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.diagnostics.performancecounter/6.0.0/system.diagnostics.performancecounter.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.directoryservices/5.0.0/system.directoryservices.5.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.directoryservices.protocols/5.0.1/system.directoryservices.protocols.5.0.1.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.drawing.common/6.0.0/system.drawing.common.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.io.filesystem.accesscontrol/5.0.0/system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.security.accesscontrol/6.0.0/system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.security.cryptography.protecteddata/6.0.0/system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.security.permissions/6.0.0/system.security.permissions.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.text.json/6.0.1/system.text.json.6.0.1.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "/Users/eren/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/Infrastructure.csproj",
+      "message": "Detected package version outside of dependency constraint: Oracle.ManagedDataAccess.EntityFramework 21.9.0 requires Oracle.ManagedDataAccess (>= 21.9.0 && < 22.0.0) but version Oracle.ManagedDataAccess 23.2.0-dev was resolved.",
+      "libraryId": "Oracle.ManagedDataAccess",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/Infrastructure.csproj",
+      "message": "Package 'EntityFramework 6.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/Infrastructure.csproj",
+      "message": "Package 'Oracle.ManagedDataAccess 23.2.0-dev' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Oracle.ManagedDataAccess",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Infrastructure/Infrastructure.csproj",
+      "message": "Package 'Oracle.ManagedDataAccess.EntityFramework 21.9.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Oracle.ManagedDataAccess.EntityFramework",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

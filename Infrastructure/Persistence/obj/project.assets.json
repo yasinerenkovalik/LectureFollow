@@ -706,7 +706,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.1"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -718,6 +719,9 @@
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0-preview.1.21102.12"
+        },
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
@@ -1732,7 +1736,9 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Application >= 1.0.0",
+      "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.15",
+      "Microsoft.Extensions.DependencyInjection >= 6.0.1",
       "Oracle.EntityFrameworkCore >= 6.21.61",
       "Oracle.ManagedDataAccess >= 23.2.0-dev",
       "Oracle.ManagedDataAccess.EntityFramework >= 21.9.0"
@@ -1766,6 +1772,9 @@
           "projectReferences": {
             "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Application/Application.csproj": {
               "projectPath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Application/Application.csproj"
+            },
+            "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/Domain.csproj": {
+              "projectPath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/Domain.csproj"
             }
           }
         }
@@ -1783,6 +1792,10 @@
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.15, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[6.0.1, )"
           },
           "Oracle.EntityFrameworkCore": {
             "target": "Package",

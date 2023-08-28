@@ -42,6 +42,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -96,6 +102,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0-preview.1.21102.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -141,6 +153,9 @@
             "projectReferences": {
               "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Application/Application.csproj": {
                 "projectPath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Application/Application.csproj"
+              },
+              "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/Domain.csproj": {
+                "projectPath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/Domain.csproj"
               }
             }
           }
@@ -158,6 +173,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.15, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.1, )"
             },
             "Oracle.EntityFrameworkCore": {
               "target": "Package",
