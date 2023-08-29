@@ -2,7 +2,7 @@ using Domain;
 
 namespace Application.Repository;
 
-public interface IStudentRepository:IGenericRepository<StudentEntity>
+public interface IStudentRepository:IGenericRepository<Student>
 {
     
 }

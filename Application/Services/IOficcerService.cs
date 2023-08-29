@@ -2,7 +2,7 @@ using Domain;
 
 namespace Application.Services;
 
-public interface IOficcerService:IGenericService<OfficerEntity>
+public interface IOficcerService:IGenericService<Officer>
 {
     
 }

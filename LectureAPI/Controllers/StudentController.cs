@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Application.Services;
-using Microsoft.AspNetCore.Http;
+using Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LectureAPI.Controllers
@@ -19,11 +15,53 @@ namespace LectureAPI.Controllers
             _studentService = studentService;
         }
 
-        [HttpGet]
+        
+        [HttpPost("add")]
+        public IActionResult Add(Student studentEntity)
+        {
+           var result= _studentService.Add(studentEntity);
+           if (result)
+           {
+               return Ok();
+           }
+
+           return BadRequest();
+        }
+
+        [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            _studentService.GetAll();
-            return Ok();
+          var result=  _studentService.GetAll();
+          if (result!=null)
+          {
+              return Ok(result);
+          }
+
+          return BadRequest();
+        }
+
+        [HttpDelete("delete")]
+        public IActionResult Delete(int id)
+        {
+            var result = _studentService.Delete(id);
+            if (result)
+            {
+                return Ok();
+            }
+
+            return BadRequest();
+        }
+
+        [HttpPost("update")]
+        public IActionResult Update(Student studentEntity)
+        {
+            var result = _studentService.Update(studentEntity);
+            if (result)
+            {
+                return Ok();
+            }
+
+            return BadRequest();
         }
     }
 }

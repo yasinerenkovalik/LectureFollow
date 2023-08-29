@@ -1,8 +1,7 @@
-
-
+using Application;
 using Application.Repository;
 using Application.Services;
-using Domain;
+using Persistence.Context;
 using Persistence.Repository;
 using Persistence.Service;
 
@@ -14,8 +13,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IStudentService, StudentService>();
 
+builder.Services.AddPersistenceServices();
 
 
 

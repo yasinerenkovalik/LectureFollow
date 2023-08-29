@@ -3,7 +3,7 @@ using Domain;
 
 namespace Application.Services;
 
-public interface ITeacherService:IGenericService<TeacherEntity>
+public interface ITeacherService:IGenericService<Teacher>
 {
     
 }

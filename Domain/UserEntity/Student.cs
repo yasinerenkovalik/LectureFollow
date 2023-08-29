@@ -1,6 +1,6 @@
 namespace Domain;
 
-public class StudentEntity:BaseEntity
+public class Student:BaseEntity
 {
     public string Class { get; set; }
     public string Faculty { get; set; }
