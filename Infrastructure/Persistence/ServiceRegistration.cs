@@ -5,17 +5,16 @@ using Persistence.Context;
 using Persistence.Repository;
 using Persistence.Service;
 
-namespace Application;
+namespace Persistence;
 
 public static class ServiceRegistration
 {
     public static void AddPersistenceServices(this IServiceCollection services)
     {
         services.AddScoped<OracleContext>();
-        services.AddScoped<IStudentService, StudentService>();
-        services.AddScoped<IStudentRepository, StudentRepository>();
-        services.AddScoped<ITeacherService, TeacherService>(); 
-        services.AddScoped<ITeacherRepository, TeacherRepository>();
-      
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IUserService, UserService>();
+        
+       
     }
 }

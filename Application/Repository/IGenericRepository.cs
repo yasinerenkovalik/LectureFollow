@@ -3,8 +3,9 @@ using Domain;
 
 namespace Application.Repository;
 
-public interface IGenericRepository<T> where T:IEntity
+public interface IGenericRepository<T> where T:BaseEntity
 {
+    T Get(Expression<Func<T, bool>>? filter = null);
     bool Add(T entity);
     List<T> GetAll(Expression<Func<T, bool>>? filter = null);
     T GetById(int id);
