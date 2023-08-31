@@ -6,7 +6,7 @@ using Persistence.Context;
 
 namespace Persistence.Repository;
 
-public class Repository<T>:IGenericRepository<T> where T :class,IEntity,new()
+public class Repository<T>:IGenericRepository<T> where T : BaseEntity, new()
 {
     private readonly OracleContext _context;
 
@@ -14,13 +14,19 @@ public class Repository<T>:IGenericRepository<T> where T :class,IEntity,new()
     {
         _context = context;
     }
+
+    public T Get(Expression<Func<T, bool>>? filter)
+    {
+        return _context.Set<T>().FirstOrDefault(filter);
+    }
+
     public bool Add(T entity)
     {
         var addetentity = _context.Entry(entity);
         addetentity.State = EntityState.Added;
-        _context.SaveChanges();
         if (addetentity.State == EntityState.Added)
         {
+            _context.SaveChanges();
             addetentity.State = EntityState.Detached;
             return true;
         }
@@ -32,6 +38,7 @@ public class Repository<T>:IGenericRepository<T> where T :class,IEntity,new()
         return filter == null ? _context.Set<T>().ToList() :
             _context.Set<T>().Where(filter).ToList();
     }
+    
 
     public T GetById(int id)
     {
@@ -44,9 +51,10 @@ public class Repository<T>:IGenericRepository<T> where T :class,IEntity,new()
         entity.Active = false;
         var updateEntity = _context.Entry(entity);
         updateEntity.State = EntityState.Modified;
-        _context.SaveChanges();
+     
         if (updateEntity.State == EntityState.Modified)
         {
+            _context.SaveChanges();
             updateEntity.State = EntityState.Detached;
             return true;
         }
@@ -58,9 +66,10 @@ public class Repository<T>:IGenericRepository<T> where T :class,IEntity,new()
         var entity = GetById(id);
         var deleteentity = _context.Entry(entity);
         deleteentity.State = EntityState.Deleted;
-        _context.SaveChanges();
+       
         if (deleteentity.State == EntityState.Deleted)
         {
+            _context.SaveChanges();
             deleteentity.State = EntityState.Detached;
             return true;
         }
@@ -72,10 +81,11 @@ public class Repository<T>:IGenericRepository<T> where T :class,IEntity,new()
     {
         var updateEntity = _context.Entry(entity);
         updateEntity.State = EntityState.Modified;
-        _context.SaveChanges();
-        updateEntity.State = EntityState.Detached;
+       
+      
         if (updateEntity.State == EntityState.Modified)
         {
+            _context.SaveChanges();
             updateEntity.State = EntityState.Detached;
             return true;
         }
