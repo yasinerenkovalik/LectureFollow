@@ -119,6 +119,10 @@
               "target": "Package",
               "version": "[6.0.16, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[6.0.0-preview.1.21102.12, )"
@@ -186,17 +190,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "DependencyInjection.Analyzer": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.15, )"
-            },
-            "Microsoft.EntityFrameworkCore.Abstractions": {
-              "target": "Package",
-              "version": "[6.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -205,10 +205,6 @@
               "version": "[6.0.15, )"
             },
             "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
@@ -223,10 +219,6 @@
             "Oracle.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.21.61, )"
-            },
-            "Oracle.ManagedDataAccess": {
-              "target": "Package",
-              "version": "[23.2.0-dev, )"
             },
             "Oracle.ManagedDataAccess.EntityFramework": {
               "target": "Package",

@@ -9,6 +9,7 @@
     <ItemGroup>
       <PackageReference Include="DependencyInjection.Analyzer" Version="6.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.16" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0-preview.1.21102.12" />
     </ItemGroup>
 

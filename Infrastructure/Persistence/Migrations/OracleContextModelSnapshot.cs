@@ -21,7 +21,7 @@ namespace Persistence.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Officer", b =>
+            modelBuilder.Entity("Domain.Faculty", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -29,12 +29,46 @@ namespace Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
+                    b.Property<bool>("Active")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Officers");
+                    b.ToTable("Faculties");
+                });
+
+            modelBuilder.Entity("Domain.Lecture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("boolean");
+
+                    b.Property<float>("Credit")
+                        .HasColumnType("real");
+
+                    b.Property<int>("FacultyId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Semester")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Lectures");
                 });
 
             modelBuilder.Entity("Domain.Role", b =>
@@ -57,7 +91,7 @@ namespace Persistence.Migrations
                     b.ToTable("Roles");
                 });
 
-            modelBuilder.Entity("Domain.Student", b =>
+            modelBuilder.Entity("Domain.StudentLecture", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -65,28 +99,18 @@ namespace Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("UserId")
+                    b.Property<bool>("Active")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("LectureId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("StudetId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students");
-                });
-
-            modelBuilder.Entity("Domain.Teacher", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Teachers");
+                    b.ToTable("StudentLectures");
                 });
 
             modelBuilder.Entity("Domain.User", b =>

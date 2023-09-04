@@ -1,11 +1,13 @@
 using Application.Services;
 using Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LectureAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+ 
     
     public class UserController : ControllerBase
     {
@@ -90,17 +92,17 @@ namespace LectureAPI.Controllers
 
             return BadRequest();
         }
-
+        [AllowAnonymous]
         [HttpPost("login")]
         public IActionResult Login(string email, string password)
         {
             var result = _userService.Login(email, password);
-            if (result == "böyle bir kullanıcı bulunamadı")
+            if (result == null)
             {
                 return BadRequest("böyle bir kullanıcı yok");
             }
 
-            return Ok("giriş işlemi başarılı");
+            return Ok(result);
         }
         
         
