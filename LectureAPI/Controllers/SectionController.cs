@@ -11,5 +11,6 @@ namespace LectureAPI.Controllers
     [ApiController]
     public class SectionController : ControllerBase
     {
+        //eren
     }
 }
