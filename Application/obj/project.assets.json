@@ -8141,7 +8141,7 @@
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
+      "msbuildProject": "../../../../ETicaret.APİ/ETicaret.API/LectureFollow/Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {

@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "ryidUa8Mb2jp32e0M++8xF9KyQc1rDh4+29Pr3JT/U+HNoWohQWv+/3761KYXOFcpe5bQHrze2R61SpYj8Zidw==",
   "success": true,
-  "projectFilePath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Application/Application.csproj",
+  "projectFilePath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Application/Application.csproj",
   "expectedPackageFiles": [
     "/Users/eren/.nuget/packages/dependencyinjection.analyzer/6.0.0/dependencyinjection.analyzer.6.0.0.nupkg.sha512",
     "/Users/eren/.nuget/packages/microsoft.aspnetcore.antiforgery/2.2.0/microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
