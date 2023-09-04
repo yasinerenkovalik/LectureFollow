@@ -14,7 +14,14 @@ public static class ServiceRegistration
         services.AddScoped<OracleContext>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUserService, UserService>();
-        
-       
+        services.AddScoped<IFacultyService, FacultyService>();
+        services.AddScoped<IFacultyRepository, FacultyRepository>();
+        services.AddScoped<ILectureService, LectureService>();
+        services.AddScoped<ILectureRepository, LectureRepository>();
+        services.AddScoped<ISectionService, SectionService>();
+        services.AddScoped<ISectionRepository, SectionRepository>();
+
+
+
     }
 }

@@ -76,9 +76,14 @@ public class UserService:IUserService
         var result = _userRepository.Login(email, password);
         if (result == "böyle bir kullanıcı bulunamadı")
         {
-            return "böyle bir kullanıcı bulunamadı";
+            return null;
         }
 
-        return "giriş işlemi başarılı";
+        return result;
+    }
+
+    public string Jwt(string mail, string password)
+    {
+        throw new NotImplementedException();
     }
 }

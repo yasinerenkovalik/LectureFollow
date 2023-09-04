@@ -1,13 +1,9 @@
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Domain.AppSetting;
 
 public  class AppSettingss
 {
-    public IConfigurationSection ConnectionString { get; set; }
-
-    public AppSettingss(IConfiguration configuration)
-    {
-        this.ConnectionString = configuration.GetSection("ConnectionString");
-    }
+ 
 }
