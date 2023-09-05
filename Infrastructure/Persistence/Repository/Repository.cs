@@ -20,17 +20,13 @@ public class Repository<T>:IGenericRepository<T> where T : BaseEntity, new()
         return _context.Set<T>().FirstOrDefault(filter);
     }
 
-    public bool Add(T entity)
+    public void Add(T entity)
     {
-        var addetentity = _context.Entry(entity);
-        addetentity.State = EntityState.Added;
-        if (addetentity.State == EntityState.Added)
-        {
-            _context.SaveChanges();
+        
+            var addetentity = _context.Entry(entity);
+            addetentity.State = EntityState.Added;
+            _context.SaveChanges(); 
             addetentity.State = EntityState.Detached;
-            return true;
-        }
-        return false;
     }
 
     public List<T> GetAll(Expression<Func<T, bool>>? filter = null)
@@ -45,50 +41,31 @@ public class Repository<T>:IGenericRepository<T> where T : BaseEntity, new()
         return _context.Set<T>().FirstOrDefault(n => n.Id == id);
     }
 
-    public bool Delete(int id)
+    public void Delete(int id)
     {
         var entity = GetById(id);
         entity.Active = false;
         var updateEntity = _context.Entry(entity);
         updateEntity.State = EntityState.Modified;
-     
-        if (updateEntity.State == EntityState.Modified)
-        {
-            _context.SaveChanges();
-            updateEntity.State = EntityState.Detached;
-            return true;
-        }
-        return false;
+        _context.SaveChanges(); 
+        updateEntity.State = EntityState.Detached;
     }
 
-    public bool HardDelete(int id)
+    public void HardDelete(int id)
     {
         var entity = GetById(id);
         var deleteentity = _context.Entry(entity);
         deleteentity.State = EntityState.Deleted;
-       
-        if (deleteentity.State == EntityState.Deleted)
-        {
-            _context.SaveChanges();
-            deleteentity.State = EntityState.Detached;
-            return true;
-        }
-        
-        return false;
+        _context.SaveChanges();
+        deleteentity.State = EntityState.Detached;
     }
 
-    public bool Update(T entity)
+    public void Update(T entity)
     {
         var updateEntity = _context.Entry(entity);
         updateEntity.State = EntityState.Modified;
-       
-      
-        if (updateEntity.State == EntityState.Modified)
-        {
-            _context.SaveChanges();
-            updateEntity.State = EntityState.Detached;
-            return true;
-        }
-        return false;
+        _context.SaveChanges();
+        updateEntity.State = EntityState.Detached;
+        
     }
 }

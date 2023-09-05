@@ -14,13 +14,18 @@ public class StudentLectureService:IStudentLectureService
     }
     public bool Add(StudentLecture entity)
     {
-        var result = _studentLectureRepository.Add(entity);
-        if (result)
+        var result = _studentLectureRepository.Get(n => n.LectureId==entity.LectureId );
+        if (result == null)
         {
+            _studentLectureRepository.Add(entity);
             return true;
         }
 
         return false;
+         
+         
+
+        
     }
 
 
@@ -44,34 +49,24 @@ public class StudentLectureService:IStudentLectureService
 
     public bool Delete(int id)
     {
-        var result = _studentLectureRepository.Delete(id);
-        if (result == false)
-        {
-            throw new Exception(Messages.LectureNotFound);
-        }
+        _studentLectureRepository.Delete(id);
+     
 
         return true;
     }
 
     public bool HardDelete(int id)
     {
-        var result = _studentLectureRepository.HardDelete(id);
-        if (result == false)
-        {
-            throw new Exception(Messages.LectureNotFound);
-        }
+     _studentLectureRepository.HardDelete(id);
+     
 
         return true;
     }
 
     public bool Update(StudentLecture entity)
     {
-        var result = _studentLectureRepository.Update(entity);
-        if (result == null)
-        {
-            throw new Exception(Messages.LectureNotFound);
-            
-        }
+        _studentLectureRepository.Update(entity);
+      
 
         return true;
     }
@@ -79,6 +74,12 @@ public class StudentLectureService:IStudentLectureService
     public StudentLecture Get()
     {
         var result = _studentLectureRepository.Get();
+        return result;
+    }
+
+    public IQueryable<dynamic> StudenLecture(int id)
+    {
+        var result = _studentLectureRepository.StudenLecture(id);
         return result;
     }
 }

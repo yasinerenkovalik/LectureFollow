@@ -1,5 +1,6 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
@@ -7,6 +8,7 @@ namespace Persistence;
 
 public static class JwtRegistiration
 {
+    
     public static void AddJwtServices(this IServiceCollection services)
     {
         var signinKey = "bubenimsigninkeyim";

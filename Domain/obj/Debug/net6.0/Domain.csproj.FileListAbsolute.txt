@@ -8,5 +8,3 @@
 /Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/obj/Debug/net6.0/Domain.dll
 /Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/obj/Debug/net6.0/refint/Domain.dll
 /Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/obj/Debug/net6.0/Domain.pdb
-/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/bin/Debug/net6.0/Domain.deps.json
-/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Domain/obj/Debug/net6.0/ref/Domain.dll

@@ -43,6 +43,18 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",
               "version": "[6.0.16, )"

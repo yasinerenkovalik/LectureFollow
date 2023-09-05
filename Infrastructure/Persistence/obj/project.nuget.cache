@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "kJV58doAL9Y8t/ZNeBKaPy77u77UvXSBuFi9q5JZilkIhEY60Vum4ULvahKmm1Z05MY/tWF4nFdo4UbfslLGDQ==",
+  "dgSpecHash": "Glije3GoFQcLgvxETIzPw1yWqnBn/GDwoonO9VvZJSvF4ame0Pdnr6vJnz+BdPZQuKukErxV64ug4FkkFbAHDw==",
   "success": true,
   "projectFilePath": "/Users/eren/Desktop/ETicaret.APİ/ETicaret.API/LectureFollow/Infrastructure/Persistence/Persistence.csproj",
   "expectedPackageFiles": [
     "/Users/eren/.nuget/packages/dependencyinjection.analyzer/6.0.0/dependencyinjection.analyzer.6.0.0.nupkg.sha512",
     "/Users/eren/.nuget/packages/entityframework/6.0.0/entityframework.6.0.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
+    "/Users/eren/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/eren/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.7.1/fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "/Users/eren/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/eren/.nuget/packages/microsoft.aspnetcore.antiforgery/2.2.0/microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "/Users/eren/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

@@ -16,13 +16,15 @@ public class FacultyService:IFacultyService
     }
     public bool Add(Faculty entity)
     {
-        var result = _facultyRepository.Add(entity);
+        var result = _facultyRepository.Get(n => n.Name == entity.Name);
         if (result == null)
         {
-            return false;
+            _facultyRepository.Add(entity);
+            return true;
         }
+        
+        return false;
 
-        return true;
     }
 
     public List<Faculty> GetAll()
@@ -49,35 +51,23 @@ public class FacultyService:IFacultyService
 
     public bool Delete(int id)
     {
-        var result = _facultyRepository.Delete(id);
-        if (result == false)
-        {
-            return false;
-        }
-
-        return true;
+       _facultyRepository.Delete(id);
+       return true;
+       
     }
 
     public bool HardDelete(int id)
     {
-        var result = _facultyRepository.HardDelete(id);
-        if (result == false)
-        {
-            return false;
-        }
-
-        return true;
+      _facultyRepository.HardDelete(id);
+      return true;
+      
     }
 
     public bool Update(Faculty entity)
     {
-        var result = _facultyRepository.Update(entity);
-        if (result == true)
-        {
-            return true;
-        }
+         _facultyRepository.Update(entity);
+         return true;
 
-        return false;
     }
 
     public Faculty Get()

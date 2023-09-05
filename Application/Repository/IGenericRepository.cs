@@ -6,10 +6,10 @@ namespace Application.Repository;
 public interface IGenericRepository<T> where T:BaseEntity
 {
     T Get(Expression<Func<T, bool>>? filter = null);
-    bool Add(T entity);
+    void Add(T entity);
     List<T> GetAll(Expression<Func<T, bool>>? filter = null);
     T GetById(int id);
-    bool Delete(int id);
-    bool HardDelete(int id);
-    bool Update(T entity);
+    void Delete(int id);
+    void HardDelete(int id);
+    void Update(T entity);
 }

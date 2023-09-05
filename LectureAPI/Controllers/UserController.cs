@@ -101,10 +101,7 @@ namespace LectureAPI.Controllers
             {
                 return BadRequest("böyle bir kullanıcı yok");
             }
-
             return Ok(result);
         }
-        
-        
     }
 }

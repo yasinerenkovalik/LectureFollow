@@ -1,13 +1,13 @@
 using Application.Services;
 using Domain;
-using Microsoft.AspNetCore.Authorization;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace LectureAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+
     public class LectureController : ControllerBase
     {
         private readonly ILectureService _lectureService;
@@ -90,6 +90,18 @@ namespace LectureAPI.Controllers
             }
 
             return BadRequest();
+        }
+
+        [HttpGet("studentselectlecture")]
+        public IActionResult StudenSelectLecture(int id)
+        {
+            var result = _lectureService.StudentSelectLecture(id);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(result);
         }
        
     }

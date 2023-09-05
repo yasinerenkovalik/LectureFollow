@@ -15,12 +15,12 @@ public class SectionService:ISectionService
     }
     public bool Add(Section entity)
     {
-        var result = _sectionRepository.Add(entity);
-        if (result)
+        var result = _sectionRepository.Get(n => n.Name == entity.Name);
+        if (result != null)
         {
+            _sectionRepository.Add(entity);
             return true;
         }
-
         return false;
     }
 
@@ -44,36 +44,26 @@ public class SectionService:ISectionService
 
     public bool Delete(int id)
     {
-        var result = _sectionRepository.Delete(id);
-        if (result == false)
-        {
-            throw new Exception(Messages.LectureNotFound);
-        }
+        _sectionRepository.Delete(id);
+   
+     
 
         return true;
     }
 
     public bool HardDelete(int id)
     {
-        var result = _sectionRepository.HardDelete(id);
-        if (result == false)
-        {
-            throw new Exception(Messages.LectureNotFound);
-        }
+       _sectionRepository.HardDelete(id);
+     
 
         return true;
     }
 
     public bool Update(Section entity)
     {
-        var result = _sectionRepository.Update(entity);
-        if (result == null)
-        {
-            throw new Exception(Messages.LectureNotFound);
-            
-        }
+         _sectionRepository.Update(entity);
+         return true;
 
-        return true;
     }
 
     public Section Get()

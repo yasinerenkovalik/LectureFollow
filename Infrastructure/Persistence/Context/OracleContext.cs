@@ -6,11 +6,12 @@ namespace Persistence.Context;
 
 public class OracleContext:DbContext
 {
+  
    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql(
-            "User ID=postgres;Password=123456;Host=localhost;Port=5432;Database=Lecture;Pooling=true;Connection Lifetime=0;");
+          "User ID=postgres;Password=123456;Host=localhost;Port=5432;Database=Lecture;Pooling=true;Connection Lifetime=0;");
     }//burası her zmana değişecek
     
     public DbSet<Role> Roles { get; set; }

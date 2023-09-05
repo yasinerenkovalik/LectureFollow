@@ -17,12 +17,13 @@ public class LectureService:ILectureService
     }
     public bool Add(Lecture entity)
     {
-        var result = _lectureRepository.Add(entity);
-        if (result)
+        var result = _lectureRepository.Get(n => n.Name == entity.Name);
+        if (result==null)
         {
+            _lectureRepository.Add(entity);
             return true;
         }
-
+        
         return false;
     }
 
@@ -46,41 +47,36 @@ public class LectureService:ILectureService
 
     public bool Delete(int id)
     {
-        var result = _lectureRepository.Delete(id);
-        if (result == false)
-        {
-            throw new Exception(Messages.LectureNotFound);
-        }
-
+      _lectureRepository.Delete(id);
+    
         return true;
     }
 
     public bool HardDelete(int id)
     {
-        var result = _lectureRepository.HardDelete(id);
-        if (result == false)
-        {
-            throw new Exception(Messages.LectureNotFound);
-        }
+        _lectureRepository.HardDelete(id);
+     
 
         return true;
     }
 
     public bool Update(Lecture entity)
     {
-        var result = _lectureRepository.Update(entity);
-        if (result == null)
-        {
-            throw new Exception(Messages.LectureNotFound);
-            
-        }
-
+       _lectureRepository.Update(entity);
+        
+       
         return true;
     }
 
     public Lecture Get()
     {
         var result = _lectureRepository.Get();
+        return result;
+    }
+
+    public IQueryable<dynamic> StudentSelectLecture(int id)
+    {
+        var result = _lectureRepository.StudentSelectLecture(id);
         return result;
     }
 }

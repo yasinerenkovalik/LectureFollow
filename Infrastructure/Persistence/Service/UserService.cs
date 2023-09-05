@@ -2,6 +2,9 @@ using Application.Message;
 using Application.Repository;
 using Application.Services;
 using Domain;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Persistence.Service;
 
@@ -17,13 +20,18 @@ public class UserService:IUserService
     }
     public bool Add(User entity)
     {
-        var result = _userRepository.Add(entity);
-        if (result==false)
+        if ()
         {
-            throw new Exception(Messages.UserAvailable);
+            
         }
-
-        return true;
+        var result = _userRepository.Get(n => n.Email == entity.Email);
+        Console.WriteLine(result);
+        if (result == null)
+        {
+            _userRepository.Add(entity);
+            return true;
+        }
+        return false;
     }
 
     public List<User> GetAll()
@@ -44,23 +52,20 @@ public class UserService:IUserService
 
     public bool Delete(int id)
     {
-        var result = _userRepository.Delete(id);
-        return result;
+    _userRepository.Delete(id);
+    return true;
     }
 
     public bool HardDelete(int id)
     {
-        var result = _userRepository.HardDelete(id);
-        return result;
+       _userRepository.HardDelete(id);
+       return true;
     }
 
     public bool Update(User entity)
     {
-        var result = _userRepository.Update(entity);
-        if (result)
-        {
-            return result;
-        }
+        _userRepository.Update(entity);
+     
 
         return false;
     }
@@ -71,7 +76,7 @@ public class UserService:IUserService
         return result;
     }
 
-    public string Login(string email, string password)
+    public string? Login(string email, string password)
     {
         var result = _userRepository.Login(email, password);
         if (result == "böyle bir kullanıcı bulunamadı")
