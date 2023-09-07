@@ -1,3 +1,4 @@
+using Application.Message;
 using Application.Services;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
@@ -7,7 +8,7 @@ namespace LectureAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
- 
+
     
     public class UserController : ControllerBase
     {
@@ -21,6 +22,11 @@ namespace LectureAPI.Controllers
         [HttpPost("add")]
         public IActionResult Add(User user)
         {
+            if (!ModelState.IsValid)
+            {
+               
+                return BadRequest(ModelState);
+            }
            var result= _userService.Add(user);
            if (result)
            {
@@ -92,14 +98,20 @@ namespace LectureAPI.Controllers
 
             return BadRequest();
         }
-        [AllowAnonymous]
-        [HttpPost("login")]
-        public IActionResult Login(string email, string password)
+
+        public class LoginModel
         {
-            var result = _userService.Login(email, password);
+           public string email { get; set; }public string password { get; set; }
+        }
+
+        [HttpPost("login")]
+       
+        public IActionResult Login([FromBody] LoginModel model)
+        {
+            var result = _userService.Login(model.email, model.password);
             if (result == null)
             {
-                return BadRequest("böyle bir kullanıcı yok");
+                return BadRequest(Messages.UserNotFoundMessage);
             }
             return Ok(result);
         }

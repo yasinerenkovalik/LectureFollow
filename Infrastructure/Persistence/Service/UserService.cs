@@ -20,12 +20,9 @@ public class UserService:IUserService
     }
     public bool Add(User entity)
     {
-        if ()
-        {
-            
-        }
+        
         var result = _userRepository.Get(n => n.Email == entity.Email);
-        Console.WriteLine(result);
+      
         if (result == null)
         {
             _userRepository.Add(entity);
@@ -79,7 +76,7 @@ public class UserService:IUserService
     public string? Login(string email, string password)
     {
         var result = _userRepository.Login(email, password);
-        if (result == "böyle bir kullanıcı bulunamadı")
+        if (result == Messages.UserNotFoundMessage)
         {
             return null;
         }

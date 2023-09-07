@@ -29,7 +29,6 @@ public class LectureService:ILectureService
 
     public List<Lecture> GetAll()
     {
-
         var result = _lectureRepository.GetAll();
         return result;
     }

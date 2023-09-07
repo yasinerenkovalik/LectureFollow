@@ -24,10 +24,5 @@ public static class ServiceRegistration
         services.AddScoped<ISectionRepository, SectionRepository>();
         services.AddScoped<IStudentLectureService, StudentLectureService>();
         services.AddScoped<IStudentLectureRepository, StudentLectureRepository>();
-     
-        
-
-
-
     }
 }

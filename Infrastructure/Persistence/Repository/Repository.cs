@@ -6,7 +6,7 @@ using Persistence.Context;
 
 namespace Persistence.Repository;
 
-public class Repository<T>:IGenericRepository<T> where T : BaseEntity, new()
+public abstract class Repository<T>:IGenericRepository<T> where T : BaseEntity, new()
 {
     private readonly OracleContext _context;
 

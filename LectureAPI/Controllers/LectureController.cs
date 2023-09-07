@@ -22,7 +22,6 @@ namespace LectureAPI.Controllers
             var result= _lectureService.Add(lecture);
             if (result)
             {
-               
                 return Ok();
             }
 

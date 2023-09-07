@@ -1,4 +1,5 @@
 using System.Data.Entity.Infrastructure.Design;
+using Application.Message;
 using Application.Services;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
@@ -56,9 +57,9 @@ namespace LectureAPI.Controllers
         public IActionResult GetAll()
         {
             var result=_facultyService.GetAll();
-            if (result==null)
+            if (result.Count<1)
             {
-                return BadRequest();
+                return NotFound();
             }
             return Ok(result);
         }
