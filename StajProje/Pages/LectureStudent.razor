@@ -1,0 +1,96 @@
+﻿@page "/lectureStudent"
+<h3>Ders Seçiniz</h3>
+@inject HttpClient Http
+
+<h1>Ders seçiniz</h1>
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="alert alert-danger">@message</div>
+}
+
+@if (lectures == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <StudentLecture studentID="HandleData" />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ders Adı</th>
+                <th>Fakülte</th>
+                <th>Dönem</th>
+                <th>Kredi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in lectures)
+            {
+                <tr>
+                    <td>@item.name</td>
+                    <td>@item.facultyid</td>
+                    <td>@item.semester</td>
+                    <td>@item.credit</td>
+                    <button @onclick="() => Send(item)">Seç</button>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private string? message;
+
+    /*[Inject]
+    ILocalStorageService localStorageService { get; set; }
+
+    private int apiToken = await localStorageService.GetToken();//token localden böyle mi çekiliyo olm?*/
+    private int receivedData;
+    private void HandleData(int data)
+    {
+        receivedData = data;
+    }
+
+    Lecture[]? lectures;
+    protected override async Task OnInitializedAsync() =>
+       lectures = await Http.GetFromJsonAsync<Lecture[]>("öğrenci çekme apisi");
+
+    private IDGroup StudentRequest = new IDGroup();
+
+
+
+    async void Send(Lecture item)
+    {
+        //received data ve item.id yi api a yollayıp dersi ekleyeceğiz
+        StudentRequest.studentid = receivedData;
+        StudentRequest.lectureid = item.id;
+        try
+        {
+            // Make an API call to authenticate the user
+            var httpClient = new HttpClient();
+            var response = await httpClient.PostAsJsonAsync("ders ekleme apisi", StudentRequest);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Handle successful authentication
+                var authenticationResult = await response.Content.ReadFromJsonAsync<AuthenticationResult>();
+                // You may want to store the authentication token or user information here.
+                // Redirect to a different page or perform other actions upon successful login.
+                message = "Student-Lesson added!";
+            }
+            else
+            {
+                // Handle failed authentication
+                message = "Type dismatch!";
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle exceptions or errors
+            message = "An error occurred: " + ex.Message;
+        }
+    }
+
+}

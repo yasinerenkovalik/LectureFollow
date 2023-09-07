@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{DAEB99DC-D95E-401B-98D9-41EAB25B1B8B}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="StajProje/Pages/StudentAdd.razor">
+    <Files>
+      <File FileName="StajProje/Shared/NavMenu.razor" />
+      <File FileName="StajProje/Pages/LoginPage.razor" />
+      <File FileName="StajProje/Shared/DTO/Student.cs" />
+      <File FileName="StajProje/Pages/StudentAdd.razor" Line="54" Column="20" />
+      <File FileName="StajProje/Shared/DTO/AuthenticationResult.cs" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.StajProje PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+</Properties>

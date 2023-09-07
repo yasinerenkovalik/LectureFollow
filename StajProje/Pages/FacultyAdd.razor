@@ -1,0 +1,59 @@
+﻿@page "/facultyadd"
+@using System.Net.Http.Json
+
+<h3>Fakülte Ekleme</h3>
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="alert alert-danger">@message</div>
+}
+<form>
+    <div class="form-group">
+        <label for="username">Name</label>
+        <input type="text" class="form-control" id="username" @bind="FacultyRequest.name" />
+    </div>
+
+
+    <button type="button" class="btn btn-primary" @onclick="Send">Login</button>
+</form>
+
+@code {
+
+    private string? message;
+    private Faculty FacultyRequest = new Faculty();
+
+
+
+    private async Task Send()
+    {
+
+        try
+        {
+            // Make an API call to authenticate the user
+            var httpClient = new HttpClient();
+            var response = await httpClient.PostAsJsonAsync("https://your-api-url.com/api/auth/login", FacultyRequest);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Handle successful authentication
+                var authenticationResult = await response.Content.ReadFromJsonAsync<AuthenticationResult>();
+                // You may want to store the authentication token or user information here.
+                // Redirect to a different page or perform other actions upon successful login.
+                message = "Lecture added!";
+
+            }
+            else
+            {
+                // Handle failed authentication
+                message = "Type dismatch!";
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle exceptions or errors
+            message = "An error occurred: " + ex.Message;
+        }
+    }
+
+
+}

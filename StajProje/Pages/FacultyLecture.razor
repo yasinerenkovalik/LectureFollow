@@ -1,0 +1,50 @@
+﻿@page "/facultylecture"
+<h3>Öğrenci Seçiniz</h3>
+@inject HttpClient Http
+
+<h1>Öğrenci seçiniz</h1>
+
+@if (facutlies == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>Sınıf</th>
+                <th>Bölüm</th>
+                <th>Kredi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in facutlies)
+            {
+                <tr>
+                    <td>@item.name</td>
+
+                    <button @onclick="() => Send(item)">Seç</button>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public Action<int>? facultyID { get; set; }
+
+    Faculty[]? facutlies;
+    protected override async Task OnInitializedAsync() =>
+       facutlies = await Http.GetFromJsonAsync<Faculty[]>("fakülteçekme apisi");
+
+    void Send(Faculty item)
+    {
+        facultyID?.Invoke(item.id);
+        //lecture add e yolla
+    }
+
+    }
